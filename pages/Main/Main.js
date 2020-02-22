@@ -115,7 +115,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  Delivery :function(){
+  Submit :function(){
     wx.chooseMessageFile({
       count: 1,
       type: 'file',
@@ -139,6 +139,30 @@ Page({
           }
         })
       }
+    })
+    wx.getUserInfo({
+      success: res => {
+        var info = res.userInfo
+        this.setData({
+          in: info,
+          User: info.nickName,
+        }),
+          wx.request({
+            url: 'http://127.0.0.1:8080/submit',
+            data: {
+              UserID: this.data.User,
+              JobID: e.currentTarget.dataset.jobid
+            },
+
+            success: res => {
+              wx.showToast({
+                title: '投递成功！', // 标题
+                icon: 'success',  // 图标类型，默认success
+                duration: 1500  // 提示窗停留时间，默认1500ms
+              })
+            }
+          })
+      },
     })
 
 

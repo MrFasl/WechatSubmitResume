@@ -121,3 +121,13 @@ def create(request):
     cur.execute("INSERT INTO wechatuser (number,name ,work) VALUES("+"'"+number+"'" +','+"'"+name+"'"+','+"'"+work+"'"+")")
     conn.commit()#保存数据库修改
     return HttpResponse("success")
+
+def submit(request):
+    UserID = request.GET['UserID']
+    JobID = request.GET['JobID']
+    conn = psycopg2.connect(database='fasldb', user='postgres', password='zzh390530', host='localhost', port='5432')
+    print("Opened database successfully")
+    cur = conn.cursor()
+    cur.execute("INSERT INTO jilu (username,job) VALUES("+"'"+UserID+"'" +','+"'"+JobID+"'"+")")
+    conn.commit()#保存数据库修改
+    return HttpResponse("success")

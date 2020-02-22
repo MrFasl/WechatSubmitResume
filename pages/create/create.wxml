@@ -1,0 +1,35 @@
+<!--pages/create/create.wxml-->
+<text>填写简历</text>
+
+<view class="weui-cell  weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input"   bindinput="upnumber" placeholder="输入手机号"/>
+                </view>
+            </view>
+<view class="weui-cell  weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input"   bindinput="upname" placeholder="输入姓名"/>
+                </view>
+            </view>
+
+        <view class="weui-cells__title">工作经历</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" bindinput="upwork" placeholder="请输入" style="height: 3.3em" name = "work"  />
+                    
+                </view>
+            </view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+        <button class="weui-btn" type="primary" bindtap="upload">提交</button>
+        
+        
+    </view>
+      

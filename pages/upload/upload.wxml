@@ -1,0 +1,7 @@
+<!--pages/upload/upload.wxml-->
+
+ <view class="page__bd page__bd_spacing">
+        <button class="weui-btn" type="primary" bindtap="upload">选择文件</button>
+        
+        
+    </view>

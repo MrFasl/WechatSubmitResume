@@ -1,0 +1,17 @@
+<view wx:for = "{{result}}">
+<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    
+                    
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">job{{item.jobid}}</view>
+                        <view class="weui-media-box__desc">{{item.jobname}}</view>
+                        <view class="weui-media-box__desc">{{item.company}}</view>
+                        <view class="button-sp-area">
+                        <button class="weui-btn mini-btn" type="primary" size="mini"bindtap="Like" data-jobid = "{{item.jobid}}">like</button>
+                        <button class="weui-btn mini-btn" type="default" size="mini"bindtap="DisLike" data-jobid = "{{item.jobid}}">dislike</button>
+                        <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="Delivery">Submit</button>
+                        </view>
+                    </view>
+                </navigator>
+
+</view>

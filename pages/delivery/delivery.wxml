@@ -1,0 +1,6 @@
+<!--pages/delivery/delivery.wxml-->
+<view>用户名{{User}}</view>
+<view>投递工作:</view>
+<view wx:for = "{{result}}">
+  <view>{{item.job}}</view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/myLike/myLike.wxml-->
+<view>{{User}}</view>
+<view>我的收藏:</view>
+<view wx:for = "{{result}}">
+  <view>{{item.job}}</view>
+</view>

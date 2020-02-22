@@ -1,0 +1,38 @@
+<!--pages/Main/Main.wxml-->
+<!-- LOGO -->
+<view class = "logo">
+<image class ="lakers" src = "../../image/timg.jfif"></image>
+</view>
+<!-- 搜索框 -->
+<view class='page_row'>
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="weui-input"   bindinput="bindKeyInput" placeholder="输入搜索内容"/>
+        <!-- <input type = "text" class="input" bindtap="sou" placeholder="请输入关键字" name = "st"> -->
+      </view>
+    </view>
+    <view class='sousuo'  bindtap="suo">搜索</view>
+ 
+  </view>
+
+<!-- 工作列表 -->
+<view class="weui-panel__hd">工作列表</view>
+            
+<view wx:for = "{{result}}">
+<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    
+                    
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">job{{item.jobid}}</view>
+                        <view class="weui-media-box__desc">{{item.jobname}}</view>
+                        <view class="button-sp-area">
+                        <button class="weui-btn mini-btn" type="primary" size="mini"bindtap="Like" data-jobid = "{{item.jobid}}">like</button>
+                        <button class="weui-btn mini-btn" type="default" size="mini"bindtap="DisLike" data-jobid = "{{item.jobid}}">dislike</button>
+                        <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="Delivery">Submit</button>
+                        </view>
+                    </view>
+                </navigator>
+
+</view>
+

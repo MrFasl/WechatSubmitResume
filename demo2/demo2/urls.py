@@ -29,6 +29,7 @@ urlpatterns = [
     path('dislike',views.dislike),
     path('search',views.search),
     path('create',views.create),
+    path('submit',views.submit),
     #url(r'^hello$', view.hello),
     #url(r'^testdb$', testdb.testdb),
 ]
